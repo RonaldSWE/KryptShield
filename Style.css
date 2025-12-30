@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgb(3, 63, 123);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px;
+}
+
+.master-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 720px;
+}
+
+.master-controls input[type="password"] {
+    flex: 1 1 auto;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+    color: inherit;
+}
+
+.master-controls button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .master-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .master-controls button {
+        width: 100%;
+    }
+}
+
+/* Inputs */
+#siteName,
+#password {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    margin: 8px 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    color: inherit;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+#submitBtn {
+    font-size: 1.1em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 12px 0 24px 0;
+    padding: 12px 18px;
+    width: 100%;
+    max-width: 240px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+}
+
+#submitBtn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: 0.25s ease-in-out;
+}
+
+#submitBtn:active {
+    transform: translateY(4px);
+    transition: transform 0.1s;
+}
+
+/* Results list styling */
+#elements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 480px;
+}
+
+#elements li {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    word-break: break-word;
+}
+
+a{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+/* Small-screen tweaks */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+        justify-content: flex-start;
+    }
+
+    #siteName,
+    #password {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    #submitBtn {
+        max-width: 100%;
+    }
+
+    #elements li {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}

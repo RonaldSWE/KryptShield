@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is an E2E encrypted website that helps you store 
+                                        your passwords in case you might forget them">
+    <link rel="icon" type="image/svg+xml" href="Assets/PassShield Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>PassShield</title>
+</head>
+
+<body>
+    <div class="master-controls">
+        <input id="masterPass" type="password" placeholder="Master password" aria-label="Master password">
+        <button id="unlockBtn">Set / Unlock</button>
+        <button id="lockBtn" disabled>Lock</button>
+        <span id="status" aria-live="polite" style="margin-left:12px;">Locked</span>
+    </div>
+
+    <label>Enter website/app name: </label>
+    <input type="text" placeholder="Website/App Name" id="siteName">
+
+    <br>
+
+    <label>Enter Password for site/app: </label>
+    <input type="password" placeholder="Password" id="password">
+
+    <br>
+
+    <button id="submitBtn">Submit</button>
+
+    <br>
+
+    <li id="elements">
+        <!-- List items will be added here dynamically -->
+    </li>
+
+    <p>
+        Having second thoughts: <a href="Info.html">Visit PassShield security info</a>
+    </p>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
